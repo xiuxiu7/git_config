@@ -10,6 +10,9 @@
     keepBackup = false                                   
     trustExitCode = false
 
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
+
 [merge]                                                      
     tool = meld                                                                         
 
@@ -17,15 +20,22 @@
     path = C:\\Program Files (x86)\\Meld\\meld.exe
     keepBackup = false                                   
     trustExitCode = false
+
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
+    keepBackup = false                                   
+	trustExitCode = true
+
 [core]
-	excludesfile = C:\\Users\\renxuan.zhang\\.gitglobalignore
-	editor = 'D:\\Program Files\\Vim\\vim64\\gvim.exe' -multiInst -nosession
+	excludesfile = ~/.gitglobalignore
 [alias]
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
-	plog = log --pretty=format:\"%h %an,%ar : %s\" --graph
+	sm = submodule
 	dirdiff = difftool --dir-diff
 	sdiff = !git diff && git submodule foreach 'git diff'
 	sdirdiff = !git difftool --dir-diff && git submodule foreach 'git difftool --dir-diff'
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	flg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches --tags --remotes
