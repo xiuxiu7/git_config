@@ -14,7 +14,7 @@
 	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
 
 [merge]                                                      
-    tool = meld                                                                         
+	tool = meld
 
 [mergetool "meld"]                                           
     path = C:\\Program Files (x86)\\Meld\\meld.exe
@@ -39,3 +39,7 @@
 	sdirdiff = !git difftool --dir-diff && git submodule foreach 'git difftool --dir-diff'
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	flg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches --tags --remotes
+[difftool "bc3"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[mergetool "bc3"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
