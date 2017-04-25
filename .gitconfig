@@ -43,3 +43,5 @@
 	path = c:/Program Files/Beyond Compare 4/bcomp.exe
 [mergetool "bc3"]
 	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[push]
+	default = simple
