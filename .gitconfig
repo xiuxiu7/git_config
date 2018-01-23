@@ -1,12 +1,13 @@
 [user]
-	name = renxuan.zhang
-	email = renxuan.zhang@nio.com
+	name = evan.lv
+	email = evan.lv@nio.com
 
 [diff]
 	tool = meld
 
 [difftool "meld"]                                           
-    path = C:\\Program Files (x86)\\Meld\\meld.exe
+    # path = C:\\Program Files (x86)\\Meld\\meld.exe
+    path = /usr/bin/meld
     keepBackup = false                                   
     trustExitCode = false
 
